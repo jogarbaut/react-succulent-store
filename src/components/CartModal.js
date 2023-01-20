@@ -41,6 +41,7 @@ const CartModal = ({ handleClose }) => {
               </div>
 
               <div className="values">
+              <div>Total Items: {productsCount}</div>
                 <div>Subtotal: ${cart.getSubtotalCost().toFixed(2)}</div>
                 <div>Sales Tax: ${cart.getTaxCost().toFixed(2)}</div>
                 <div className="total">Total: ${cart.getTotalCost().toFixed(2)}</div>
