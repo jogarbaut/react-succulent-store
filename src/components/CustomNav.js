@@ -35,7 +35,9 @@ const CustomNav = () => {
         </button>
         <button className="button btn__cart" type="button" onClick={handleShow}>
           <IoCartOutline />
-          <div className="flex-row cart-count">{productsCount > 0 && productsCount < 10 ? <span>{productsCount}</span> : <span>9+</span>}</div>
+          <div className="flex-row cart-count">
+            {productsCount < 10 ? <span>{productsCount}</span> : <span>9+</span>}
+            </div>
         </button>
       </div>
       {show ? <CartModal handleClose={handleClose} /> : <></>}
