@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-succulent-store/static/css/main.6d06b296.css",
-    "main.js": "/react-succulent-store/static/js/main.5ac32c97.js",
+    "main.css": "/react-succulent-store/static/css/main.257a83e5.css",
+    "main.js": "/react-succulent-store/static/js/main.7436f30c.js",
     "static/media/succulents-1.jpg": "/react-succulent-store/static/media/succulents-1.163dee9dfd8fd588d6c7.jpg",
     "static/media/aeonium-s.jpg": "/react-succulent-store/static/media/aeonium-s.75f5d7fa9bfc40a6be46.jpg",
     "static/media/echeveria-s.jpg": "/react-succulent-store/static/media/echeveria-s.1b26d1c1c5a31871f854.jpg",
@@ -10,11 +10,11 @@
     "static/media/aloe-s.jpg": "/react-succulent-store/static/media/aloe-s.c36e641491d3458587b2.jpg",
     "static/media/sempervivum-s.jpg": "/react-succulent-store/static/media/sempervivum-s.42637f0a3e515c640ff0.jpg",
     "index.html": "/react-succulent-store/index.html",
-    "main.6d06b296.css.map": "/react-succulent-store/static/css/main.6d06b296.css.map",
-    "main.5ac32c97.js.map": "/react-succulent-store/static/js/main.5ac32c97.js.map"
+    "main.257a83e5.css.map": "/react-succulent-store/static/css/main.257a83e5.css.map",
+    "main.7436f30c.js.map": "/react-succulent-store/static/js/main.7436f30c.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d06b296.css",
-    "static/js/main.5ac32c97.js"
+    "static/css/main.257a83e5.css",
+    "static/js/main.7436f30c.js"
   ]
 }
