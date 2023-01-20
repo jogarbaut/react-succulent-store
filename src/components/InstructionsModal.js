@@ -6,37 +6,33 @@ const Instructions = ({ handleInstructionsClose }) => {
     <>
       <div className="overlay"></div>
       <article className="instructions-modal">
-        <div className="flex-row instructions__header">
-          <h2>React Keep Instructions</h2>
-          <button className="button" type="button" onClick={handleInstructionsClose}>
+        <div className="flex-row instructions-modal__header">
+          <h2>Succulent Store Instructions</h2>
+          <button className="btn btn__cancel" type="button" onClick={handleInstructionsClose}>
             <IoCloseOutline />
           </button>
         </div>
-        <p>Web application built with React front-end library and custom responsive UI components inspired by Google Keep.</p>
+        <p>Web application built with React front-end library and custom responsive UI components to provide an e-commerce experience for customers of a succulent shop.</p>
 
         <h3>React Technologies</h3>
         <ul>
+          <li>Reusable React components were designed including product cards and cart product cards which provides scalable design if shop adds more to their inventory.</li>
+          <li>React state enables users to interact with buttons to add or remove items and instantaneously see quantity and costs updates.</li>
           <li>React components subscribe to the context changes, as necessary, and will automatically rerender.</li>
-          <li>React useEffect hooks are implemented to enable the user to search their notes using the search bar.</li>
-          <li>React state enables users to interact with new and existing notes.</li>
-          <li>A custom React hook was utilized to detect screen width and conditionally render components.</li>
         </ul>
         <h3>User Interface</h3>
         <ul>
           <li>Web application was designed with "mobile-first" design approach.</li>
-          <li>User can toggle between the horizontal stacked notes view or the grid view based on their preference using the </li>
-          <li>The custom navigation bar conditionally renders buttons based on device dimensions.</li>
+          <li>User can edit cart from both the main page and cart modal.</li>
+          <li>Product feed and cart was designed to be responsive to smaller and larger screens.</li>
         </ul>
         <h3>Application Features</h3>
         <ul>
-          <li>Create a note with the note form and add a title, body, background color, and choose to pin the note.</li>
-          <li>Click a note to edit or delete a note.</li>
-          <li>Use the search bar to enter a search term which will automatically rerender the pinned/unpinned sections.</li>
-          <li>Pin and unpin notes to visually separate the notes.</li>
+          <li>Add and remove items from cart using the product card buttons.</li>
+          <li>Click the cart icon to view cart that conditionally renders information based on items the user has selected.</li>
         </ul>
         <hr />
         <div className="signature">
-
           <h4>Project Created by Jomel Bautista</h4>
           <div className="flex-row">
             <button className="button__signature" type="button">

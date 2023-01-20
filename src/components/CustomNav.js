@@ -17,14 +17,14 @@ const CustomNav = () => {
     <nav className="top-nav">
       <div className="top-nav-brand">
         <img src={leaf} id="leaf" className="brand-icon" alt="leaf" />
-        <h1>Super Succulents</h1>
+        <h1>Sincere Succulents</h1>
       </div>
       <div className="top-nav-settings-cart">
         <button className="button" type="button" onClick={handleInstructionsShow}>
           <IoInformationCircle />
         </button>
         <button className="button" type="button">
-          <a href="https://github.com/jomelbautista/react-keep" id="button-github" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/jomelbautista/react-succulent-store" id="button-github" target="_blank" rel="noopener noreferrer">
             <IoLogoGithub />
           </a>
         </button>
