@@ -1,13 +1,371 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  /* Variable Styles */
+  --c-brand: #00d1b2;
+  --c-brand-rgb: 0, 209, 178;
+  --c-black: #333;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+button {
+  font-family: inherit;
+}
+
+.main {
+  width: 100%;
+}
+
+/* Top Navigation */
+.top-nav {
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  box-shadow: 5px 5px 15px rgba(51, 51, 51, .25);
+}
+
+.top-nav-brand {
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top-nav-settings-cart {
+  display: flex;
+  align-items: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-icon {
+  background: var(--c-brand);
+  height: 2rem;
+}
+
+.top-nav .button {
+  background-color: white;
+  border: none;
+  font-size: 1.5rem;
+  display: grid;
+  place-content: center;
+  color: var(--c-brand);
+  padding: .5rem;
+  border: 1.5px solid var(--c-brand);
+  border-radius: 50%;
+}
+
+.button a {
+  color: var(--c-brand);
+  display: grid;
+  place-content: center;
+}
+
+.top-nav .button:hover, .top-nav .button a:hover {
+  cursor: pointer;
+  color: white;
+  background-color: var(--c-brand);
+  transition: .2s ease-in-out;
+}
+
+/* Landing */
+.landing {
+  padding-top: 85px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(var(--c-brand-rgb), 0.5);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+  gap: 1rem;
+}
+
+.title-text {
+  text-shadow: white 1px 1px 5px;
+}
+
+.title-text h1 {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.title-text h2 {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.title-image {
+  width: 75%;
+  display: flex;
+  margin: auto;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+}
+
+/* Product Feed */
+.product-feed {
+  margin: 0 auto 2rem auto;
+}
+
+.product-feed h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.product-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+/* Product Card */
+.product-card {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: .5rem;
+  min-height: 200px;
+  max-height: 300px;
+  padding: 1rem;
+  gap: 1.5rem;
+  box-shadow: 5px 5px 15px rgba(51, 51, 51, .1);
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+.product-card-l {
+  flex: 1;
+  display: grid;
+  place-content: center;
+}
+
+.product-card-r {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: .75rem;
+}
+
+.product-card .img-container {
+  width: 100%;
+}
+
+.product-card-l .img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.product-card .title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.product-card .price {
+  color: var(--c-brand);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.product-card .price-unit {
+  font-size: .85rem;
+}
+
+.product-card .quantity {
+  font-size: .8rem;
+}
+
+.btn__add-to-cart {
+  padding: .5rem 1rem;
+  background-color: var(--c-brand);
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.btn__add, .btn__subtract {
+  background-color: var(--c-brand);
+  font-size: .75rem;
+  display: grid;
+  place-content: center;
+  color: white;
+  border-radius: 50%;
+  padding: .25rem;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 10;
+}
+
+/* Cart Modal */
+.cart-modal {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: white;
+  max-width: 800px;
+}
+
+/* Instructions Modal */
+.instructions-modal {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: white;
+  max-width: 800px;
+}
+
+/* Footer */
+.footer {
+  padding: 0.75rem;
+  display: grid;
+  place-content: center;
+}
+
+@media only screen and (min-width: 610px) {
+  .title-container {
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 750px;
+  }
+
+  .title-text {
+    text-align: right;
+    margin-right: 2rem;
+  }
+
+  .title-text h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .title-text h2 {
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+  
+  .title-image {
+    width: 50%;
+  }
+
+  .product-feed h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    place-content: center;
+  }
+}
+
+@media only screen and (min-width: 992px) {  
+  .title-image {
+    width: 65%;
+  }
 }
