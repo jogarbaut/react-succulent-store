@@ -22,7 +22,7 @@ const CustomNav = () => {
       <div className="top-nav">
       <div className="top-nav-brand">
         <img src={leaf} id="leaf" className="brand-icon" alt="leaf" />
-        <h1>Sincere Succulents</h1>
+        <h1>Sydney's Succulents</h1>
       </div>
       <div className="top-nav-settings-cart">
         <button className="button" type="button" onClick={handleInstructionsShow}>
